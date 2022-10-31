@@ -13,7 +13,6 @@ export default function CatForm(props) {
             
             const catToCreate = values 
 
-            
             axios.post(`https://localhost:7101/api/Categories`, catToCreate).then(() => {
                 props.setShowCreate(false)
                 props.getCategories()
@@ -21,17 +20,14 @@ export default function CatForm(props) {
         }
         
         else {
-
             const catToEdit = {
                 categoryId: props.category.categoryId,
                 catName: values.catName,
                 catDesc: values.catDesc
             }
-
             axios.put(`https://localhost:7101/api/Categories/${props.category.categoryId}`, 
             catToEdit).then(() => {props.setShowEdit(false)
                                    props.getCategories()
-
             })
         }
     }
