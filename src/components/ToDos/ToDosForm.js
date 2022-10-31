@@ -59,7 +59,7 @@ export default function ToDosForm(props) {
        
        
         {({errors, touched}) => (
-            <Form id='resourceForm'>
+            <Form id='todosForm'>
                 <div className='form-group m-3'>
                     <Field name='name' className='form-control' placeholder='Name' />
                     {errors.name && touched.name ? (
@@ -100,7 +100,7 @@ export default function ToDosForm(props) {
                 </div>
                 <div className='form-group m-3'>
                     <button type='submit' className='btn btn-info m-3'>
-                        Submit Resource to API
+                        Submit To Do to API
                     </button>
                 </div>
             </Form>
